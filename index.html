@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ritm - Where Music Meets Community</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Lobster+Two&display=swap');
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #742a40;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            position: relative;
+        }
+        body::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: url('images/Mask group.png'); /* Add music note pattern */
+            background-size: cover;
+            opacity: 0.2; /* Adjust opacity as needed */
+            z-index: -1; /* Ensures the background image is behind content */
+        }
+        .nav {
+            background: white;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            font-size: 24px;
+            font-weight: bold;
+            border-bottom-left-radius: 50px;
+            border-bottom-right-radius: 50px;
+            box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
+            position: absolute;
+            top: 0;
+            width: 100%;
+        }
+        .nav a {
+            text-decoration: none;
+            color: black;
+        }
+        .nav a:hover {
+            text-decoration: underline;
+        }
+        .header {
+            font-size: 100px;
+            font-weight: bold;
+            font-family: 'Lobster Two', cursive;
+        }
+        .tagline {
+            font-size: 30px;
+            margin-top: -10px;
+        }
+        .cta-buttons {
+            margin-top: 20px;
+        }
+        .cta-buttons button {
+            background: white;
+            color: black;
+            font-size: 20px;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            margin: 10px;
+        }
+        .cta-buttons button:hover {
+            background: #333;
+        }
+        .footer {
+            position: absolute;
+            bottom: 10px;
+            font-size: 16px;
+        }
+        .features-section {
+            display: none;
+            padding: 50px;
+            text-align: center;
+            font-size: 24px;
+        }
+    </style>
+    <script>
+        function showFeatures() {
+            document.querySelector('.features-section').style.display = 'block';
+            document.querySelector('.home-section').style.display = 'none';
+        }
+    </script>
+</head>
+<body>
+    <div class="nav">
+        <a href="#" onclick="showFeatures()">features</a>
+        <a href="#about">about</a>
+        <a href="#contact">contact</a>
+        <a href="#login"><strong>login</strong></a>
+    </div>
+    <div class="home-section">
+        <div class="header">ritm.</div>
+        <div class="tagline">welcome to ritm – where music meets community</div>
+        <div class="cta-buttons">
+            <button onclick="location.href='#explore'">Start Exploring</button>
+            <button onclick="location.href='#signup'">Join Now</button>
+            <button onclick="location.href='#guest'">Browse as Guest</button>
+        </div>
+    </div>
+    <div class="features-section">
+        <h1>Features</h1>
+        <p>🎼 Chords & Sheet Music</p>
+        <p>🎤 Karaoke & Recording</p>
+        <p>🎧 Music Matchmaking</p>
+        <p>💬 Discussions & Playlists</p>
+    </div>
+    <div class="footer">© 2025 Ritm. All rights reserved.</div>
+</body>
+</html>
